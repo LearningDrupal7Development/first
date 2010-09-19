@@ -1,0 +1,53 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * A module exemplifying Drupal coding practices and APIs.
+ *
+ * This module provides a block that lists all of the 
+ * installed modules. It illustrates coding standards, 
+ * practices, and API use for Drupal 7.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function first_help($path, $arg) {
+  if ($path == 'admin/help#first') {
+    return t('A demonstration module.');
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function first_block_info() {
+  $blocks = array();
+  
+  $blocks['list_modules'] = array(
+    'info' => t('A listing of all of the enabled modules.'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function first_block_view($block_name = '') {
+  if ($block_name == 'list_modules') {
+    $list = module_list();
+    
+    $theme_args = array('items' => $list, 'type' => 'ol');
+    $content = theme('item_list', $theme_args);
+    
+    $block = array(
+      'subject' => t('Enabled Modules'),
+      'content' => $content,
+    );
+    
+    return $block;
+  }
+}

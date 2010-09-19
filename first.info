@@ -1,0 +1,11 @@
+;$Id$
+
+name = First
+description = A first module.
+core = 7.x
+package = Drupal 7 Development
+files[] = first.module
+files[] = first.test
+
+;dependencies[] = autoload
+;php = 5.2
