@@ -29,6 +29,5 @@ Please report any issues you find with this code.
 Special thanks to my co-authors (especially sdboyer, who found the only
 reported bug) and my technical reviewers.
 
-Matt Butcher
-http://technosophos.com
-http://twitter.com/technosophos
+[Matt Butcher](http://technosophos.com) 
+[Twitter](http://twitter.com/technosophos)
