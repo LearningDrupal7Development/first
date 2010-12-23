@@ -26,7 +26,7 @@ The First module is installed just like any other Drupal module.
 
 Please report any issues you find with this code.
 
-Special thanks to my co-authors (especially sdboyer, who found the only
+Special thanks to my co-authors (especially sdboyer, who found the first
 reported bug) and my technical reviewers.
 
 [Matt Butcher](http://technosophos.com) 
